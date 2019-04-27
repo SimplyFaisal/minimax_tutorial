@@ -54,7 +54,7 @@ class PlayerAI(BaseAI):
     Returns a random move for the given grid.
     """
     def random_move(self, grid):
-        return random.choice(self.get_moves_for_max(grid))
+        return random.choice(grid.getAvailableMoves())
 
 
     """
@@ -77,7 +77,7 @@ class PlayerAI(BaseAI):
 
 
     """
-    Returns the moves that max can make and the resulting grid.
+    Returns the moves that max can make to the given grid.
     """
     def get_moves_for_max(self, grid):
         pass
@@ -88,7 +88,7 @@ class PlayerAI(BaseAI):
     move min can make to hinder max.
     """
     def min_value(self, grid, depth=None, previous=None):
-         """
+        """
         1.) Check if the grid is in a terminal state. If it is then return a
         Result object with the utility of the current state and the move that
         caused it.
@@ -104,7 +104,11 @@ class PlayerAI(BaseAI):
         """
         pass
 
-    def get_moves_for_min
+    """
+    Returns the moves that min can make to the given grid.
+    """
+    def get_moves_for_min(self, grid):
+        pass
 
 
     """
